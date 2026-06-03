@@ -1,11 +1,12 @@
 from pedidos import menu_pedidos
 from clientes import menu_clientes
-from utilidades import mostrar_titulo
+from utilidades import mostrar_titulo, limpiar_pantalla
 
 
 def main():
     salir = False
     while not salir:
+        limpiar_pantalla()
         mostrar_titulo("GESTOR DE PEDIDOS")
         print("1. Clientes")
         print("2. Pedidos")
