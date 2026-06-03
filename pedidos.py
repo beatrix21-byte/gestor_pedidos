@@ -187,7 +187,7 @@ def menu_pedidos():
         Imprime menú en consola y modifica la lista global 'pedidos'.
     """
     fin = False
-    while fin == False:
+    while not fin:
         print("\n--- PEDIDOS ---")
         print("1. Crear pedido")
         print("2. Listar pedidos")
@@ -279,8 +279,8 @@ def ver_pedidos():
         pos = 0
         for p in pedidos:
             total = 0
-            for l in p["lineas"]:
-                total = total + l["cantidad"] * l["precio"]
+            for linea in p["lineas"]:
+                total = total + linea["cantidad"] * linea["precio"]
             if total > 100:
                 total = total - total * 0.10
             elif total > 50:
