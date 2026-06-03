@@ -5,7 +5,7 @@ from utilidades import mostrar_titulo
 
 def main():
     salir = False
-    while salir == False:
+    while not salir:
         mostrar_titulo("GESTOR DE PEDIDOS")
         print("1. Clientes")
         print("2. Pedidos")
@@ -23,4 +23,5 @@ def main():
             print("Opción incorrecta")
 
 
-main()
+if __name__ == "__main__":
+    main()
